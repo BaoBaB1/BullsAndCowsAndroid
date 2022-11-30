@@ -7,12 +7,12 @@
     >
 
     <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_50dp"
         android:id="@+id/endGameCrossBtn"
         android:src="@drawable/cross"
         android:scaleType="fitCenter"
-        android:padding="5dp"
+        android:padding="@dimen/_5dp"
         android:tooltipText="Back to main menu"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,12 @@
     </ImageButton>
 
     <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_50dp"
         android:id="@+id/restartButton"
         android:src="@drawable/restart"
         android:scaleType="fitCenter"
-        android:padding="5dp"
+        android:padding="@dimen/_5dp"
         android:background="@android:color/transparent"
         android:tooltipText="Restart game"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/restartButton"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/difficultyLabel"
@@ -76,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bullsScore"
@@ -86,8 +86,8 @@
     </TextView>
 
     <EditText
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/_300dp"
+        android:layout_height="@dimen/_60dp"
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -104,12 +104,12 @@
     </EditText>
 
     <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_50dp"
         android:id="@+id/checkButton"
         android:src="@drawable/confirm"
         android:scaleType="fitCenter"
-        android:padding="3dp"
+        android:padding="@dimen/_3dp"
         android:background="@android:color/transparent"
         android:tooltipText="Check input"
         app:layout_constraintStart_toEndOf="@id/userInputField"
@@ -128,7 +128,7 @@
         android:text="History"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="40sp"
+        android:textSize="@dimen/_40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userInputField"
@@ -141,7 +141,7 @@
     <ScrollView
         android:id="@+id/historyScroller"
         android:layout_width="fill_parent"
-        android:layout_height="350dp"
+        android:layout_height="@dimen/_350dp"
         android:scrollbars="vertical"
         android:fillViewport="true"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/_20sp"
             >
         </TextView>
     </ScrollView>

@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Congratulations! You won."
         android:gravity="center"
-        android:textSize="50sp"
+        android:textSize="@dimen/_50sp"
         android:textColor="#fffbbb"
         android:shadowColor="#000000"
         android:shadowDx="7.5"
@@ -29,7 +29,7 @@
 
     <Button
         android:id="@+id/newGameButton"
-        android:layout_width="190dp"
+        android:layout_width="@dimen/_190dp"
         android:layout_height="wrap_content"
         app:layout_constraintVertical_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,14 +37,14 @@
         app:layout_constraintTop_toBottomOf="@id/congratsTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="New game"
-        android:textSize="18sp"
+        android:textSize="@dimen/_18sp"
         app:layout_constraintHorizontal_bias="0"
         >
     </Button>
 
     <Button
         android:id="@+id/mainMenuButton"
-        android:layout_width="190dp"
+        android:layout_width="@dimen/_190dp"
         android:layout_height="wrap_content"
         app:layout_constraintVertical_bias="0.15"
         app:layout_constraintStart_toEndOf="@id/newGameButton"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="@id/newGameButton"
         app:layout_constraintBottom_toBottomOf="@id/newGameButton"
         android:text="To main menu"
-        android:textSize="18sp"
+        android:textSize="@dimen/_18sp"
         app:layout_constraintHorizontal_bias="1"
         >
     </Button>
