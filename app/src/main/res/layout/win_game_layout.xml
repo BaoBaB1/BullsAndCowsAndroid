@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
+    tools:context=".VictoryActivity"
     >
 
     <TextView
         android:id="@+id/congratsTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Congratulations! You won."
+        android:text="@string/congratulations_you_won"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:textSize="@dimen/_50sp"
         android:textColor="#fffbbb"
@@ -31,14 +28,11 @@
         android:id="@+id/newGameButton"
         android:layout_width="@dimen/_190dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/congratsTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="New game"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_below="@id/congratsTextView"
+        android:text="@string/new_game"
         android:textSize="@dimen/_18sp"
-        app:layout_constraintHorizontal_bias="0"
         >
     </Button>
 
@@ -46,15 +40,13 @@
         android:id="@+id/mainMenuButton"
         android:layout_width="@dimen/_190dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintStart_toEndOf="@id/newGameButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/newGameButton"
-        app:layout_constraintBottom_toBottomOf="@id/newGameButton"
-        android:text="To main menu"
+        android:layout_marginStart="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_below="@id/congratsTextView"
+        android:layout_toEndOf="@id/newGameButton"
+        android:text="@string/to_main_menu"
         android:textSize="@dimen/_18sp"
-        app:layout_constraintHorizontal_bias="1"
         >
     </Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

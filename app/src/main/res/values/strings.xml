@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">android_lab1</string>
+    <string name="app_name">android_lab2</string>
+    <string name="congratulations_you_won">Congratulations! You won.</string>
+    <string name="new_game">New game</string>
+    <string name="to_main_menu">To main menu</string>
+    <string name="select_difficulty">Select difficulty</string>
+    <string name="easy_difficulty">Easy (N = 4)</string>
+    <string name="medium_difficulty">Medium (N = 5)</string>
+    <string name="hard_difficulty">Hard (N = 6)</string>
+    <string name="amp"><![CDATA[&]]></string>
+    <string name="game_name">BULLS AND COWS</string>
+    <string name="start_game">Start game</string>
+    <string name="about_game">About game</string>
+    <string name="about_developer">About developer</string>
+    <string name="exit">Exit</string>
+    <string name="input_hint">Input number here</string>
+    <string name="history">History</string>
 </resources>

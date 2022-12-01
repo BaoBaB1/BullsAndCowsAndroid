@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".MainMenuActivity">
 
     <ImageView
         android:id="@+id/bullIcon"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_150dp"
+        android:layout_alignParentStart="true"
         android:background="@android:color/transparent"
         android:src="@drawable/bull_icon"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         />
 
     <TextView
         android:id="@+id/ampSymbol"
         android:layout_width="@dimen/_115dp"
         android:layout_height="@dimen/_150dp"
+        android:layout_toEndOf="@id/bullIcon"
         android:gravity="center"
-        android:text="&amp;"
+        android:text="@string/amp"
         android:textSize="@dimen/_70sp"
         android:textStyle="bold|italic"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/bullIcon"
         >
     </TextView>
 
@@ -43,24 +33,17 @@
         android:layout_height="@dimen/_150dp"
         android:background="@android:color/transparent"
         android:src="@drawable/cow_icon"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ampSymbol"
+        android:layout_toEndOf="@id/ampSymbol"
         />
 
     <TextView
         android:id="@+id/gameName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ampSymbol"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        android:text="BULLS AND COWS"
+        android:layout_below="@id/ampSymbol"
+        android:layout_marginTop="@dimen/_20sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/game_name"
         android:gravity="center"
         android:textSize="@dimen/_40sp"
         android:textColor="#fffbbb"
@@ -76,12 +59,10 @@
         android:id="@+id/startGameButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gameName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Start game"
+        android:layout_below="@id/gameName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50dp"
+        android:text="@string/start_game"
         android:textSize="@dimen/_20sp"
         >
     </Button>
@@ -90,12 +71,10 @@
         android:id="@+id/aboutGameButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/startGameButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="About game"
+        android:layout_below="@id/startGameButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sp"
+        android:text="@string/about_game"
         android:textSize="@dimen/_20sp"
         >
     </Button>
@@ -104,12 +83,10 @@
         android:id="@+id/devInfoButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aboutGameButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="About developer"
+        android:layout_below="@id/aboutGameButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sp"
+        android:text="@string/about_developer"
         android:textSize="@dimen/_20sp"
         >
     </Button>
@@ -118,14 +95,12 @@
         android:id="@+id/exitButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/devInfoButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Exit"
+        android:layout_below="@id/devInfoButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sp"
+        android:text="@string/exit"
         android:textSize="@dimen/_20sp"
         >
     </Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

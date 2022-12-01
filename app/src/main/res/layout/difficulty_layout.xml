@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#D5EEF1"
-    android:orientation="vertical"
-    >
+    tools:context=".SelectDifficultyActivity">
 
     <ImageButton
         android:layout_width="@dimen/_80dp"
@@ -13,14 +13,10 @@
         android:id="@+id/difficultyCrossBtn"
         android:src="@drawable/cross"
         android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/_5dp"
         android:padding="@dimen/_5dp"
         android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="1"
+        android:layout_alignParentEnd="true"
         >
 
     </ImageButton>
@@ -29,29 +25,24 @@
         android:id="@+id/selectDiffText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select difficulty"
+        android:layout_below="@id/difficultyCrossBtn"
+        android:layout_marginTop="@dimen/_30sp"
         android:textStyle="bold"
         android:textSize="@dimen/_40sp"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/difficultyCrossBtn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
+        android:text="@string/select_difficulty"
         >
 
     </TextView>
 
     <Button
         android:id="@+id/easyDifButton"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/selectDiffText"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Easy (N = 4)"
+        android:layout_below="@id/selectDiffText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50dp"
+        android:text="@string/easy_difficulty"
         android:textSize="@dimen/_20sp"
         >
     </Button>
@@ -60,13 +51,11 @@
         android:id="@+id/mediumDifButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/easyDifButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Medium (N = 5)"
-        android:textSize="20sp"
+        android:layout_below="@id/easyDifButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sp"
+        android:text="@string/medium_difficulty"
+        android:textSize="@dimen/_20sp"
         >
     </Button>
 
@@ -74,16 +63,12 @@
         android:id="@+id/hardDifButton"
         android:layout_width="@dimen/_300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mediumDifButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Hard (N = 6)"
+        android:layout_below="@id/mediumDifButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sp"
+        android:text="@string/hard_difficulty"
         android:textSize="@dimen/_20sp"
         >
     </Button>
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
-    >
+    tools:context=".MainGameActivity">
 
     <ImageButton
         android:layout_width="@dimen/_80dp"
@@ -13,14 +13,10 @@
         android:src="@drawable/cross"
         android:scaleType="fitCenter"
         android:padding="@dimen/_5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:tooltipText="Back to main menu"
         android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0.99"
         >
     </ImageButton>
 
@@ -33,15 +29,10 @@
         android:padding="@dimen/_5dp"
         android:background="@android:color/transparent"
         android:tooltipText="Restart game"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/endGameCrossBtn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0.99"
+        android:layout_toStartOf="@id/endGameCrossBtn"
+        android:layout_alignParentTop="true"
         >
     </ImageButton>
-
 
     <TextView
         android:id="@+id/difficultyLabel"
@@ -49,11 +40,9 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="@dimen/_30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/restartButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        android:layout_below="@id/restartButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_60dp"
         >
     </TextView>
 
@@ -63,11 +52,8 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="@dimen/_30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/difficultyLabel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
+        android:layout_below="@id/difficultyLabel"
+        android:layout_alignParentStart="true"
         >
     </TextView>
 
@@ -77,47 +63,38 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="@dimen/_30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bullsScore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
+        android:layout_below="@id/bullsScore"
+        android:layout_alignParentStart="true"
         >
     </TextView>
 
     <EditText
         android:layout_width="@dimen/_300dp"
         android:layout_height="@dimen/_60dp"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30sp"
         android:textStyle="bold"
         android:gravity="center"
         android:inputType="numberDecimal"
         android:id="@+id/userInputField"
-        android:hint="Input number here"
-        app:layout_constraintTop_toBottomOf="@id/cowsScore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:hint="@string/input_hint"
+        android:layout_below="@id/cowsScore"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_50dp"
         >
     </EditText>
 
     <ImageButton
         android:layout_width="@dimen/_80dp"
-        android:layout_height="@dimen/_50dp"
+        android:layout_height="@dimen/_60dp"
         android:id="@+id/checkButton"
         android:src="@drawable/confirm"
         android:scaleType="fitCenter"
-        android:padding="@dimen/_3dp"
         android:background="@android:color/transparent"
         android:tooltipText="Check input"
-        app:layout_constraintStart_toEndOf="@id/userInputField"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/userInputField"
-        app:layout_constraintBottom_toBottomOf="@id/userInputField"
-
-
+        android:layout_toEndOf="@id/userInputField"
+        android:layout_below="@id/cowsScore"
+        android:layout_marginTop="@dimen/_50dp"
         >
     </ImageButton>
 
@@ -125,30 +102,24 @@
         android:id="@+id/historyText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="History"
+        android:text="@string/history"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="@dimen/_40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userInputField"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/userInputField"
+        android:layout_marginTop="@dimen/_40sp"
         >
     </TextView>
-
 
     <ScrollView
         android:id="@+id/historyScroller"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/_350dp"
+        android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:fillViewport="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historyText"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.2"
+        android:layout_below="@id/historyText"
+        android:layout_alignParentStart="true"
         >
         <TextView
             android:id="@+id/historyJournal"
@@ -161,5 +132,4 @@
         </TextView>
     </ScrollView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
